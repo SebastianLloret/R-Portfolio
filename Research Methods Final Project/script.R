@@ -1,3 +1,9 @@
+# Read Data
+data <- read_csv("GitHub/R-Portfolio/data.csv", 
+  col_types = cols(age = col_integer(), 
+  recall = col_integer(), score = col_number(), 
+  year = col_integer()))
+
 # Convert both independent variables to factors with appropriate levels
 data$recall <- factor(data$recall, 
                        levels = c(0, 2),
