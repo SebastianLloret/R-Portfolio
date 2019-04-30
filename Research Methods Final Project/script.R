@@ -1,16 +1,16 @@
 # Convert both independent variables to factors with appropriate levels
-data$Recall <- factor(data$Recall, 
+data$recall <- factor(data$recall, 
                        levels = c(0, 2),
                        labels = c("Immediate", "Delay"))
 
-data$Candy <- factor(data$Candy, 
+data$candy <- factor(data$candy, 
                       levels = c("Sugar", "None", "Sugarfree"),
                       labels = c("Jolly Ranchers", "None", "Sugarfree Mints"))
 
 head(data)
 
 # Create a basic frequency table for the data
-table(data$Recall, data$Candy)
+table(data$recall, data$candy)
 
 install.packages(
   "ggplot2",
@@ -24,8 +24,15 @@ library(ggplot2)
 
 # Box plot with multiple groups
 # +++++++++++++++++++++
-# Plot tooth length ("len") by groups ("dose")
-# Color box plot by a second group: "supp"
+# Plot score by groups
+# Color box plot by second group (candy type)
 library("ggpubr")
-ggboxplot(data, x = "Recall", y = "Total score", color = "Candy",
-          palette = c("#00AFBB", "#E7B800"))
+ggboxplot(data, x = "recall", y = "score", color = "candy", palette = c("#00AFBB", "#E7B800", "#333333"))
+
+# Two-Way ANOVA
+res.aov2 <- aov(score ~ recall + candy, data = data)
+summary(res.aov2)
+
+# Neither are significant alone, but what about the interaction?
+res.aov3 <- aov(score ~ recall + candy + recall:candy, data = data)
+summary(res.aov3)
