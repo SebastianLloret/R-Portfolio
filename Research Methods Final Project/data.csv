@@ -1,10 +1,9 @@
-score,age,gender,year,major,recall,candy
+Score,Age,Gender,Year,Major,Recall,Candy
 5.00 / 12,20,Female,2,Psychology,0,Sugar
 8.00 / 12,20,Female,3,Pax Holiday ,0,Sugar
 6.00 / 12,21,Female,3,Integrative Neuroscience,0,Sugar
 6.00 / 12,21,Female,3,Integrative Neuroscience,0,Sugar
 6.00 / 12,20,Female,2,Psychology,0,Sugar
-1.00 / 12,20,Female,3,Integrative Neuroscience,0,Sugar
 9.00 / 12,21,Female,3,Integrative Neuroscience ,0,Sugar
 10.00 / 12,21,Female,3,Integrative Neuroscience,0,Sugar
 7.00 / 12,20,Female,3,Integrative Neuroscience,0,Sugar
@@ -14,7 +13,6 @@ score,age,gender,year,major,recall,candy
 7.00 / 12,20,Female,3,Psychology,2,Sugar
 7.00 / 12,20,Female,2,Integrative Neuroscience,2,Sugar
 9.00 / 12,22,Female,3,Integrative Neuroscience,2,Sugar
-2.00 / 12,21,Female,3,Integrative Neuroscience,2,Sugar
 6.00 / 12,20,Female,2,Psychology ,2,Sugar
 4.00 / 12,19,Male,2,Psychology,0,None
 10.00 / 12,19,Male,2,Integrative Neuroscience,0,None
